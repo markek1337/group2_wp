@@ -1,0 +1,852 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #2487ce;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #469fdf;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+.cost {
+    font-size: larger;
+    color: #4dcfc0;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.icon-box:hover {
+    background: #1cb49a;
+    border-color: #1cb49a;
+}
+.icon-box:hover .icon {
+    background: #fff;
+}
+.icon-box:hover .icon::before {
+    background: #3291e6;
+}
+.icon-box:hover h2, .icon-box:hover p {
+    color: #fff;
+}
+.navbar {
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color: white !important;
+    font-family: Roboto, sans-serif !important;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #249A8C;
+    border-color: #249A8C
+}
+.nav-link:hover {
+    color: #249A8C !important;
+}
+.benefits {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.sub1 {
+    padding-bottom: 60px;
+}
+.sub2 {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.con-dark {
+    border-radius: 10px;
+    background-color: #e8e8e9;
+}
+.con-light {
+    border-radius: 10px;
+}
+.customerpic {
+    border-radius: 10px;
+}
+@media (min-width:1200px) {
+	.carousel-caption {
+		left: 90%;
+        position: absolute;
+        top: 5%;
+	}
+}
+@media (max-width:750px) {
+	.carousel-caption {
+        top: 0%;
+	}
+}
+.navbar {
+    background-color: white !important;
+    font-family: Roboto, sans-serif !important;
+    padding: 10px !important;
+}
+.navbar-text {
+    color: #414141 !important;
+    font-size: 150% !important;
+    font-weight: 700 !important;
+}
+.nav-link {
+    padding: 15px !important;
+    font-size: large;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #249A8C;
+    border-color: #249A8C
+}
+.nav-link:hover {
+
+    color: #249A8C !important;
+}
+.form {
+    width: 70%;
+    padding-left:15px;
+} 
+:root{
+--width: 100%;
+--height: 100%;
+--border-width: 200px;
+--border-height: 200px;
+
+}
+
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.grid-item {
+ padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+input[type=information], select {
+width: 100%;
+
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #C4C4C4;
+border-radius: 4px;
+box-sizing: border-box;
+border-radius: 20px;
+}
+
+
+
+
+input[type=submit] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+#forms {
+border-radius: 30px;
+padding: 20px;
+margin-top: 80px;
+margin-bottom:80px;
+margin-left: 30px;
+margin-right:30px;
+width: auto;
+
+background-color: #C4C4C4;
+
+}
+
+footer {
+margin-top: 80px;
+height: auto;
+background-color: #414141;
+vertical-align: top;
+
+}
+
+.segment-one h2 {
+align-self: center;
+}
+
+.segment-one {
+display: inline-flex;
+padding-top: 7px;
+}
+
+.footer-logo {
+mix-blend-mode: lighten;
+}
+
+.social-media {
+mix-blend-mode: lighten;
+}
+
+.segment-two {
+text-align: center;
+padding-top: 15px;
+}
+
+.segment-three {
+display: block;
+}
+
+.my-0 {
+width: 114px;
+height: 45px;
+background-color: #C95252;
+}
+
+
+
+.fot-cont {
+padding-top: 50px;
+padding-bottom: 35px;
+}
+
+.segment-three h2 {
+color: #FFFFFF;
+}
+
+.segment-one h2 {
+color: #FFFFFF;
+}
+
+.my-row-5 p {
+text-align: center;
+color: white;
+}
+
+.my-row-5 {
+background-color: #343434;
+width: auto;
+height: 12px;
+}
+
+.segment-four {
+text-align: center;
+background-color: #303030;
+
+}
+
+.segment-four p{
+color: #fff;
+padding-top: 5px;
+}
+
+html,body {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+
+.img-gal {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+
+.hexagon-gallery {
+margin: auto;
+margin-top: 50px;
+max-width: 1000px;
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+grid-auto-rows: 200px;
+grid-gap: 14px;
+padding-bottom: 50px;
+}
+
+.hex {
+display: flex;
+position: relative;
+width: 240px;
+height: 265px;
+background-color: #424242;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex:first-child {
+grid-row-start: 1;
+grid-column: 2 / span 2;
+}
+
+.hex:nth-child(2) {
+grid-row-start: 1;
+grid-column: 4 / span 2;
+}
+
+.hex:nth-child(3) {
+grid-row-start: 1;
+grid-column: 6 / span 2;
+}
+
+.hex:nth-child(4) {
+grid-row-start: 2;
+grid-column: 1 / span 2;
+}
+
+.hex:nth-child(5) {
+grid-row-start: 2;
+grid-column: 3 / span 2;
+}
+
+.hex:nth-child(6) {
+grid-row-start: 2;
+grid-column: 5 / span 2;
+}
+
+.hex:nth-child(7) {
+grid-row-start: 2;
+grid-column: 7 / span 2;
+}
+
+.hex:nth-child(8) {
+grid-row-start: 3;
+grid-column: 2 / span 2;
+}
+
+.hex:nth-child(9) {
+grid-row-start: 3;
+grid-column: 4 / span 2;
+}
+
+.hex:nth-child(10) {
+grid-row-start: 3;
+grid-column: 6 / span 2;
+}
+.carousel-caption .h2 {
+    font-size: x-large;
+    text-align:left;
+    margin-right:30px;
+}
+.icon {
+    width: 70px;
+    height: 70px;
+}
+.about-us {
+    background-color: #e8e8e9;
+}
+.rew1 {
+    margin-top: 20px;
+}
+.rew3 {
+    margin-top: 40px;
+}
+.form {
+    width: 70%;
+}
+.logo-image {
+    width: 110px;
+    padding: none;
+}
+
+.icl {
+    height: 240px;
+}
+
+.navbar-text {
+    color: #414141 !important;
+    font-size: 140% !important;
+    font-weight: 300 !important;
+}
+footer {
+    margin-top: 80px;
+    height: auto;
+    background-color: #414141;
+    vertical-align: top;
+}
+
+.segment-one h1 {
+    align-self: center;
+}
+ 
+.segment-one {
+    display: inline-flex;
+    padding-top: 7px;
+}
+ 
+.footer-logo {
+    mix-blend-mode: lighten;
+}
+ 
+.social-media {
+    mix-blend-mode: lighten;
+}
+ 
+.segment-two {
+    text-align: center;
+    padding-top: 15px;
+}
+ 
+.segment-three {
+    display: block;
+}
+ 
+.my-0 {
+    width: 114px;
+    height: 45px;
+    background-color: #C95252;
+}
+ 
+.fot-cont {
+    padding-top: 50px;
+    padding-bottom: 35px;
+}
+ 
+.segment-three h2 {
+    color: #FFFFFF;
+}
+ 
+.segment-one h1 {
+    color: #FFFFFF;
+}
+ 
+.my-row-5 p {
+    text-align: center;
+    color: white;
+}
+ 
+.my-row-5 {
+    background-color: #343434;
+    width: auto;
+    height: 12px;
+}
+ 
+.segment-four {
+    text-align: center;
+    background-color: #303030;
+}
+ 
+.segment-four p{
+    color: #fff;
+    padding-top: 5px;
+}
+ 
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: #ffffff;
+    padding: 10px;
+    padding-top:20px;
+    padding-bottom: 40px;
+}
+
+.grid-item {
+ padding: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+
+h2{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+#Description{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#booking{
+    text-align: center;
+    width: 829px;
+    height: 100px;
+    margin: auto;
+    border: 3px solid #414141;
+    padding-top:15px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+input[type=info] {
+    margin-top:10px;
+width: 50%;
+background-color: #E9E9E9;
+display: inline-block;
+border: 1px solid #292929;
+box-sizing: border-box;
+
+}
+
+
+
+
+footer {
+margin-top: 80px;
+height: auto;
+background-color: #414141;
+vertical-align: top;
+
+}
+
+.segment-one h1 {
+align-self: center;
+}
+
+.segment-one {
+display: inline-flex;
+padding-top: 7px;
+}
+
+.footer-logo {
+mix-blend-mode: lighten;
+}
+
+.social-media {
+mix-blend-mode: lighten;
+}
+
+.segment-two {
+text-align: center;
+padding-top: 15px;
+}
+
+.segment-three {
+display: block;
+}
+
+.my-0 {
+width: 114px;
+height: 45px;
+background-color: #C95252;
+}
+
+.fot-cont {
+padding-top: 50px;
+padding-bottom: 35px;
+}
+
+.segment-three h2 {
+color: #FFFFFF;
+}
+
+.segment-one h1 {
+color: #FFFFFF;
+}
+
+.my-row-5 p {
+text-align: center;
+color: white;
+}
+
+.my-row-5 {
+background-color: #343434;
+width: auto;
+height: 12px;
+}
+
+.segment-four {
+text-align: center;
+background-color: #303030;
+}
+
+.segment-four p{
+color: #fff;
+padding-top: 5px;
+}
+
+html,body {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+
+
+.img-gal {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+.hexagon-gallery {
+margin: auto;
+margin-top: 20px;
+margin-bottom: 30px;
+max-width: 1000px;
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+grid-auto-rows: 200px;
+grid-gap: 14px;
+padding-bottom: 50px;
+}
+
+.hex {
+display: flex;
+position: relative;
+width: 240px;
+height: 265px;
+background-color: #424242;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex:first-child {
+grid-row-start: 1;
+grid-column: 2 / span 2;
+}
+
+.hex:nth-child(2) {
+grid-row-start: 1;
+grid-column: 4 / span 2;
+}
+
+.hex:nth-child(3) {
+grid-row-start: 1;
+grid-column: 6 / span 2;
+}
+
+.hex:nth-child(4) {
+grid-row-start: 2;
+grid-column: 1 / span 2;
+}
+
+.hex:nth-child(5) {
+grid-row-start: 2;
+grid-column: 3 / span 2;
+}
+
+.hex:nth-child(6) {
+grid-row-start: 2;
+grid-column: 5 / span 2;
+}
+
+.hex:nth-child(7) {
+grid-row-start: 2;
+grid-column: 7 / span 2;
+}
+
+.clipped-border:hover{
+transform:scale(1.2);
+transition:transform 0.2s;
+z-index:10;
+}
+.heading {
+    margin-top: 94px;
+}
+
+.my-container{
+    margin-top: 97px;
+    max-width: 1600px;
+}
+
+.iceland-article p {
+    font-size: 25px;
+}
+
+.sweden-article p {
+    font-size: 25px;
+}
+
+.norway-article p {
+    font-size: 25px;
+}
+
+.my-row-2 {
+    margin-top: 190px;
+}
+
+.my-row-3 {
+    margin-top: 190px;
+}
+
+.img-destinations {
+    width: 474px;
+    height: 317px;
+}
+.header-text {
+    text-align: center;
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+
+}
+
+footer {
+    margin-top: 80px;
+    height: auto;
+    background-color: #414141;
+    vertical-align: top;
+}
+footer h2 {
+    color: white;
+    font-size: 200%;
+}
+footer .segment-one {
+    top: 50%;
+    width: fit-content;
+}
+footer .segment-three {
+    width: fit-content;
+}
+.link {
+    color: #249A8C;
+}
+
+.my-link:hover {
+    color: #006D60;
+}
+
+.segment-one h1 {
+    align-self: center;
+}
+
+.segment-one {
+    display: inline-flex;
+    padding-top: 7px;
+}
+
+.footer-logo {
+    mix-blend-mode: lighten;
+}
+
+.social-media {
+    mix-blend-mode: lighten;
+}
+
+.segment-two {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.segment-three {
+    display: block;
+}
+
+.my-0 {
+    width: 114px;
+    height: 45px;
+    background-color: #C95252;
+}
+
+.fot-cont {
+    padding-top: 50px;
+    padding-bottom: 35px;
+}
+
+.segment-three h2 {
+    color: #FFFFFF;
+}
+
+.segment-one h2 {
+    color: #FFFFFF;
+}
+
+.my-row-5 p {
+    text-align: center;
+    color: white;
+}
+
+.my-row-5 {
+    background-color: #343434;
+    width: auto;
+    height: 12px;
+}
+
+.segment-four {
+    text-align: center;
+    background-color: #303030;
+}
+
+.segment-four p{
+    color: #fff;
+    padding-top: 5px;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+
+    .iceland-article p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .iceland-article h1 {
+        margin-top: 10px;
+    }
+
+    .my-container{
+        margin-top: 40px;
+    }
+
+    .heading {
+        margin-top: 40px;
+    }
+
+    .sweden-article p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .sweden-article h1 {
+        margin-top: 10px;
+    }
+
+    .norway-article p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .norway-article h1 {
+        margin-top: 10px;
+    }
+
+    .my-row-4 {
+        justify-content: center;
+    }
+
+    .segment-three {
+        display: block;
+        padding-top: 35px;
+        text-align: center;
+    }
+
+    .fot-cont {
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+}
