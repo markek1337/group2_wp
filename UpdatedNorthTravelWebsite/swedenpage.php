@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -44,6 +45,10 @@
         </div>
       </div>
     </nav>
+=======
+<?php
+include "header.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
 
       
           <img width="100%" height="647px" src="https://static01.nyt.com/images/2021/04/26/travel/26travel-sweden-21/26travel-sweden-21-mobileMasterAt3x.jpg" alt="main image" >
@@ -113,6 +118,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 
+<<<<<<< HEAD
     <footer>
         <div class="footer-top">
             <div class="container fot-cont">
@@ -146,5 +152,9 @@
             </div>
         </div>
     </footer>
+=======
+    <?php
+    include "footer.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
 
   </html>

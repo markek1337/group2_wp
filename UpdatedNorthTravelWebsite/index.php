@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,6 +12,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         
     </head>
+=======
+<?php
+include "header.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -221,6 +226,7 @@
                 </section>
                 <section class="footer-sec">
                   <!--Footer-->
+<<<<<<< HEAD
         <footer>
           <div class="footer-top">
               <div class="container fot-cont">
@@ -254,5 +260,9 @@
               </div>
           </div>
       </footer>
+=======
+                  <?php
+                  include "footer.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
                 </section>
             </main>

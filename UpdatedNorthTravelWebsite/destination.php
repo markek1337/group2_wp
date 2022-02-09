@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,6 +46,10 @@
         </div>
       </nav>
 
+=======
+<?php
+include "header.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
         <!--Map Image-->
 
         <img src="images/map_destination_page.png" class="img-responsive" alt="" width="100%">
@@ -138,6 +143,7 @@
         </div>
 
 
+<<<<<<< HEAD
         <!--Footer-->
         <footer>
             <div class="footer-top">
@@ -172,6 +178,11 @@
                 </div>
             </div>
         </footer>
+=======
+<!--Footer-->
+<?php
+include "footer.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
 
     </body>
 </html>

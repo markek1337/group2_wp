@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,6 +47,10 @@
         </div>
       </div>
     </nav>
+=======
+<?php
+include "header.php";?>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
 
       <div class="row">
         <div class="col-12">
@@ -105,6 +110,7 @@
 </body>
 
   <!--Footer-->
+<<<<<<< HEAD
   <footer>
     <div class="footer-top">
         <div class="container fot-cont">
@@ -140,3 +146,9 @@
 </footer>
 
 </html>
+=======
+<?php
+include "footer.php";?>
+
+</html>
+>>>>>>> 584b7815a786d68d2572151601221e84c30087fa
