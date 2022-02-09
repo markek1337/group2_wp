@@ -24,7 +24,7 @@
             <div class="midnav navbar-brand container-md" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="C:\Users\PC1\Pictures\destination.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
