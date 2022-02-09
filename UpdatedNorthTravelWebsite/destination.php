@@ -82,7 +82,7 @@ include "header.php";?>
                         Phasellus vitae iaculis lorem, at accumsan lorem.
                         In hendrerit volutpat nisi eget luctus. Phasellus a pharetra dui.
                         <br>
-                        <a href="icelandpage.html" class="link my-link">Learn more</a>
+                        <a href="icelandpage.php" class="link my-link">Learn more</a>
                         </p>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ include "header.php";?>
                         Phasellus vitae iaculis lorem, at accumsan lorem.
                         In hendrerit volutpat nisi eget luctus. Phasellus a pharetra dui.
                         <br>
-                        <a href="swedenpage.html" class="link my-link">Learn more</a>
+                        <a href="swedenpage.php" class="link my-link">Learn more</a>
                         </p>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ include "header.php";?>
                         Phasellus vitae iaculis lorem, at accumsan lorem.
                         In hendrerit volutpat nisi eget luctus. Phasellus a pharetra dui.
                         <br>
-                        <a href="norwaypage.html" class="link my-link">Learn more</a>
+                        <a href="norwaypage.php" class="link my-link">Learn more</a>
                         </p>
                     </div>
                 </div>
