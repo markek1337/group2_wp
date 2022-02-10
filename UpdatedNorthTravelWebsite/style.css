@@ -849,4 +849,7 @@ html,body {
         padding-top: 30px;
         padding-bottom: 35px;
     }
+    .nav {
+        z-index:1;
+    }
 }
