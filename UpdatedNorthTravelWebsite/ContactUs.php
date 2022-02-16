@@ -31,7 +31,13 @@ include "header.php";
         <div class="grid-item">Pohjoisesplanadi<br>
             11-13 00170<br>
             Helsinki</div>
-        <div class="grid-item">+35825657316</div>
+      <script language="Javascript" type="text/Javascript">    
+      function mouseoverevent()  
+      {  
+          alert("Our phone is unavailable at this time due to technical issues");  
+      }  
+      </script>
+        <div id="phone_num" class="grid-item" onmouseover="mouseoverevent()">+35825657316</div>
         <div class="grid-item">northtravel@gmail.com</div> 
       </div>
       
@@ -50,7 +56,11 @@ include "header.php";
           <label for="sbj">Subject</label>
           <input type="information" id="sbj" name="subject" placeholder="Write your request..">
         
-          <input type="submit" value="Submit">
+          <script src= "myJS.js"> </script>
+          <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
+          
+        
+        <noscript>You need to enable JS to see this content.</noscript>
         </form>
       </div>
     </aside>
