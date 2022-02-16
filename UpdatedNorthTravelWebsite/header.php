@@ -11,6 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="jscript.js"></script>
         
     </head>
     <body>
@@ -39,6 +40,26 @@
                 <li class="nav-item">
                   <a class="nav-link" href="ContactUs.php">Contact Us</a>
                 </li>
+                <!-- Themes-->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="C:\Users\PC1\Pictures\destination.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Theme</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <form action="">
+                      <label>
+                        Background color:  
+                        <input type="color" name="background" size="10"
+                        onchange="setColor('background', this.value)" />
+                      </label>
+                      <br />
+                      <label>
+                        Font color: 
+                        <input type="color" name="foreground" size="10"
+                        onchange="setColor('foreground', this.value)" />
+                      </label>
+                    </form>
+                  </ul>
+                </li>
+                <!-- Themes-->
               </ul>
             </div>
             <div class="rightnav container-md" id="navbarSupportedContent">
