@@ -4,7 +4,7 @@ include "header.php";
       <div class="row">
         <div class="col-12">
             <main>
-          <img width="100%" height="647px" src="https://res.cloudinary.com/anora/image/upload/f_auto,q_auto/v1612346750/common/other/northern-lights.jpg" alt="main image" >
+            <img id="header_image" width="100%" height="647px" src="https://res.cloudinary.com/anora/image/upload/f_auto,q_auto/v1612346750/common/other/northern-lights.jpg" alt="main image" >
            </div>
       </div>
       <div class="grid-container" style="padding: 20px;">
@@ -18,7 +18,12 @@ include "header.php";
         <div class="grid-item"> </div>
         <div class="grid-item"><h1><strong>Contact Us</strong></h1> </div>
         <div class="grid-item"> </div>
-
+      <script>
+        function mousedownevent()  
+      {  
+          alert("Our phone is unavailable at this time due to technical issues");  
+      }  
+      </script>
         <div class="grid-item"> 
            <img width="100px" height="100px" alt="location" src="https://img.icons8.com/ios/344/place-marker--v1.png">
         </div>
