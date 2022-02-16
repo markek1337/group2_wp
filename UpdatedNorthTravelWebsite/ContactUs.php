@@ -55,9 +55,6 @@ include "header.php";
           <label for="sbj">Subject</label>
           <input type="information" id="sbj" name="subject" placeholder="Write your request..">
           <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
-          
-          
-
         
         <noscript>You need to enable JS to see this content.</noscript>
         </form>
