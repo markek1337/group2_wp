@@ -1,6 +1,12 @@
 <?php
 include "header.php";
 ?>
+<script language="Javascript" type="text/Javascript">    
+    function mouseoverevent()  
+    {  
+        alert("Our phone is unavailable at this time due to technical issues");  
+    }  
+</script>  
 
       <div class="row">
         <div class="col-12">
@@ -31,7 +37,7 @@ include "header.php";
         <div class="grid-item">Pohjoisesplanadi<br>
             11-13 00170<br>
             Helsinki</div>
-        <div class="grid-item">+35825657316</div>
+        <div id="phone_num" class="grid-item" onmouseover="mouseoverevent()">+35825657316</div>
         <div class="grid-item">northtravel@gmail.com</div> 
       </div>
       
