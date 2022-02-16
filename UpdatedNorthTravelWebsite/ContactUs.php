@@ -57,8 +57,8 @@ include "header.php";
           <input type="information" id="sbj" name="subject" placeholder="Write your request..">
         
           <script src= "myJS.js"> </script>
-          <button type="button" onclick="myjsfunction()">Submit</button>
-          <p id="demo"></p>
+          <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
+          
         
         <noscript>You need to enable JS to see this content.</noscript>
         </form>
