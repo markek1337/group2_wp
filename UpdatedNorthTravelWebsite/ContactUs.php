@@ -1,8 +1,6 @@
 <?php
 include "header.php";
 ?>
-    <script src= "myJS.js"> </script>
-
       <div class="row">
         <div class="col-12">
             <main>
