@@ -11,3 +11,7 @@ function myjsfunction() {
       document.getElementById("demo").innerHTML = "Your request has been submitted.";
     }
 }
+function mousedownevent()  
+      {  
+          alert("Our phone is unavailable at this time due to technical issues");  
+      }  
