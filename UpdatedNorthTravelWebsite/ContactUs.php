@@ -56,14 +56,8 @@ include "header.php";
           <label for="sbj">Subject</label>
           <input type="information" id="sbj" name="subject" placeholder="Write your request..">
         
-          <script>
-document.getElementById("demo").onclick = function() {myjsfunction()};
 
-function myjsfunction() {
-  document.getElementById("demo").innerHTML = "Your request has been submitted.";
-}
-          //<script src= "myJS.js"> 
-          </script>
+          <script src= "myJS.js"> 
           <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
           
           
