@@ -59,9 +59,6 @@ include "header.php";
 
           <script src= "myJS.js"> </script>
           <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
-          
-          
-
         
         <noscript>You need to enable JS to see this content.</noscript>
         </form>
