@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 17, 2022 at 12:20 PM
+-- Generation Time: Feb 17, 2022 at 12:29 PM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.15
 
@@ -32,7 +32,7 @@ CREATE TABLE `Customers` (
   `First name` varchar(50) NOT NULL,
   `Last name` varchar(50) NOT NULL,
   `Phone number` varchar(50) NOT NULL,
-  `Country` varchar(50) NOT NULL,
+  `Country` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Support request ID` int NOT NULL,
   `E-mail` int NOT NULL,
   `Login ID` varchar(50) NOT NULL
