@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 20, 2022 at 12:49 PM
+-- Generation Time: Feb 20, 2022 at 01:23 PM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.15
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `monaSQL`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Booking`
+--
+
+CREATE TABLE `Booking` (
+  `Book_ID` int NOT NULL,
+  `Book_date` date NOT NULL,
+  `Customer ID` int NOT NULL,
+  `E-mail` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -79,6 +92,15 @@ CREATE TABLE `Support` (
 --
 
 --
+-- Indexes for table `Booking`
+--
+ALTER TABLE `Booking`
+  ADD PRIMARY KEY (`Book_ID`),
+  ADD KEY `Book_date` (`Book_date`),
+  ADD KEY `Customer ID` (`Customer ID`),
+  ADD KEY `E-mail` (`E-mail`);
+
+--
 -- Indexes for table `Customers`
 --
 ALTER TABLE `Customers`
@@ -110,6 +132,12 @@ ALTER TABLE `Support`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `Booking`
+--
+ALTER TABLE `Booking`
+  MODIFY `Book_ID` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Customers`
