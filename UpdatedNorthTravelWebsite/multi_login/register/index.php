@@ -1,16 +1,7 @@
 <?php
-include('multi_login/register/php-main.php');
+include('php-main.php');
 include "header.php";
 ?>
-<head>
-	<title>M</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
-	<!-- Styling for public area -->
-	<link rel="stylesheet" href="static/css/public_styling.css">
-	<meta charset="UTF-8">
-</head>
 <div class="content">
 		<!-- notification message -->
 		<?php if (isset($_SESSION['success'])) : ?>
@@ -23,6 +14,24 @@ include "header.php";
 				</h3>
 			</div>
 		<?php endif ?>
+		<!-- logged in user information -->
+		<div class="profile_info">
+			<img src="images/user_profile.png"  >
+
+			<div>
+				<?php  if (isset($_SESSION['user'])) : ?>
+					<strong><?php echo $_SESSION['user']['username']; ?></strong>
+
+					<small>
+						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
+						<br>
+						<a href="index.php?logout='1'" style="color: red;">logout</a>
+					</small>
+
+				<?php endif ?>
+			</div>
+		</div>
+	</div>
           <!-- Responsive header-->
           <header class="header">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

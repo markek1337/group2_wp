@@ -1,0 +1,130 @@
+CREATE TABLE `destinations` (
+     `category_ID` INT(10) NOT NULL AUTO_INCREMENT ,
+     `country` ENUM('Finland','Sweden','Norway','Iceland','Greenland') NOT NULL ,
+     `price_cat` ENUM('Expensive','Average','Cheap','') NOT NULL ,
+     `seasonal` ENUM('summer','winter','','') NOT NULL ,
+     PRIMARY KEY (`category_ID`)) ENGINE = InnoDB;
+
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Average','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Average','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Expensive','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Cheap','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Norway','Cheap','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Average','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Average','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Expensive','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Cheap','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Sweden','Cheap','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Average','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Average','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Expensive','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Cheap','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Iceland','Cheap','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Average','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Average','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Expensive','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Cheap','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Finland','Cheap','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Average','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Average','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Expensive','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Expensive','winter');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Cheap','summer');
+INSERT INTO `destinations_cat`(`country`, `price_cat`, `seasonal`) VALUES ('Greenland','Cheap','winter');
+CREATE TABLE destinations (
+    destination_ID int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    description varchar(100),
+    image varchar(100) NOT NULL,
+    price int(10),
+    price_cat ENUM('Expensive','Average','Cheap','') NOT NULL,
+    country ENUM('Finland','Sweden','Norway','Iceland','Greenland') NOT NULL ,
+    seasonal ENUM('Summer','Winter','Whole year') NOT NULL ,
+    PRIMARY KEY (destination_ID);
+    
+);
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`) VALUES ('Swedish Lapland', 'Sweden', '800', 'Average', 'winter','1.png',);
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`) VALUES ('The Fjords', 'Norway', '1200', 'Expensive', 'summer','2.png');
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`) VALUES ('Hveragerdi', 'Iceland', '600', 'Cheap', 'winter','3.png');
+CREATE TABLE users (
+    user_ID int(10) NOT NULL AUTO_INCREMENT,
+    username varchar(100) NOT NULL,
+    email varchar(100) NOT NULL,
+    user_type varchar(100) NOT NULL,
+    password varchar(100) NOT NULL,
+    date_created DATE DEFAULT (CURRENT_DATE) NOT NULL,
+    PRIMARY KEY (destination_ID),
+    FOREIGN KEY (category_ID) REFERENCES destinations_cat(category_ID)
+);
+SELECT destinations_cat.country, destinations_cat.price_cat, destinations_cat.seasonal, destinations_cat.category_ID, Destinations.price, Destinations.destination_name
+FROM Destinations
+LEFT JOIN destinations_cat ON Destinations.category_ID = destinations_cat.category_ID
+CREATE TABLE destination_country (
+    country_ID int(10) NOT NULL AUTO_INCREMENT,
+    country varchar(100) NOT NULL ,
+    PRIMARY KEY (country_ID)  
+);
+INSERT INTO `destination_country`(`country`) VALUES ('Sweden');
+INSERT INTO `destination_country`(`country`) VALUES ('Norway');
+INSERT INTO `destination_country`(`country`) VALUES ('Iceland');
+INSERT INTO `destination_country`(`country`) VALUES ('Finland');
+INSERT INTO `destination_country`(`country`) VALUES ('Greenland')
+CREATE TABLE destination_priceCat (
+    priceCat_ID int(10) NOT NULL AUTO_INCREMENT,
+    priceCat varchar(100) NOT NULL ,
+    PRIMARY KEY (priceCat_ID)  
+);
+INSERT INTO `destination_priceCat`(`priceCat`) VALUES ('Expensive');
+INSERT INTO `destination_priceCat`(`priceCat`) VALUES ('Average');
+INSERT INTO `destination_priceCat`(`priceCat`) VALUES ('Cheap');
+CREATE TABLE destination_seasonal (
+    seasonal_ID int(10) NOT NULL AUTO_INCREMENT,
+    seasonal varchar(100) NOT NULL ,
+    PRIMARY KEY (seasonal_ID)  
+);
+INSERT INTO `destination_seasonal`(`seasonal`) VALUES ('Summer');
+INSERT INTO `destination_seasonal`(`seasonal`) VALUES ('Winter');
+INSERT INTO `destination_seasonal`(`seasonal`) VALUES ('Whole year')
+CREATE TABLE destinations (
+    destination_ID int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    price int(10) NOT NULL,
+    image varchar(100),
+    link varchar(100),
+    description varchar(100),
+    seasonal_ID int(10) NOT NULL,
+    priceCat_ID int(10) NOT NULL,
+    country_ID int(10) NOT NULL,
+    PRIMARY KEY (destination_ID),
+    FOREIGN KEY (seasonal_ID) REFERENCES destination_seasonal(seasonal_ID),
+    FOREIGN KEY (priceCat_ID) REFERENCES destination_priceCat(priceCat_ID),
+    FOREIGN KEY (country_ID) REFERENCES destination_country(country_ID),
+);
+INSERT INTO `destinations`(`name`, `price`, `image`) VALUES ('Swedish Lapland', '800', '1.png', '3', '2', '1');
+INSERT INTO `destinations`(`name`, `price`, `image`) VALUES ('The Fjords', '1200', '2.png', '1', '1', '2' );
+INSERT INTO `destinations`(`name`, `price`, `image`) VALUES ('Hveragerdi', '600', '3.png','1', '2', '3' );
+SELECT destinations.seasonal_ID, destinations_seasonal.seasonal_ID, destinations_seasonal.seasonal, destinations_priceCat.priceCat_ID, destinations.priceCat_ID, destinations_priceCat.category, destinations_country.country, destinations_country.country_ID, destinations.price, destinations.name, destinations.image
+FROM destinations
+LEFT JOIN destinations_country ON destinations.country_ID = destinations_country.country_ID
+LEFT JOIN destinations_priceCat ON destinations.priceCat_ID = destinations_priceCat.priceCat_ID
+LEFT JOIN destinations_seasonal ON destinations.seasonal_ID = destinations_seasonal.seasonal_ID
+CREATE TABLE destinations (
+    destination_ID int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    description varchar(100),
+    link varchar(100),
+    image varchar(100),
+    price int(10),
+    price_cat ENUM('Expensive','Average','Cheap','') NOT NULL,
+    country ENUM('Finland','Sweden','Norway','Iceland','Greenland') NOT NULL ,
+    seasonal ENUM('Summer','Winter','Whole year') NOT NULL ,
+    PRIMARY KEY (destination_ID)
+);
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`, `link`) VALUES ('Swedish Lapland', 'Sweden', '800', 'Average', 'Whole Year','1.png', '../../swedenpage.php');
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`, `link`) VALUES ('The Fjords', 'Norway', '1200', 'Expensive', 'Summer','2.png', '../../norwaypage.php');
+INSERT INTO `destinations`(`name`, `country`, `price`, `price_cat`, `seasonal`, `image`, `link`) VALUES ('Hveragerdi', 'Iceland', '600', 'Cheap', 'Winter','3.png', '../../icelandpage.php');
