@@ -1,7 +1,7 @@
 <?php
 
 include 'connection.php';
- 
+
 if (isset($_POST["submit"])) {
     $First_name = mysqli_real_escape_string($con, $_POST["First_name"]);
     $Last_name = mysqli_real_escape_string($con, $_POST["Last_name"]);
@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
         if ($photo_size > 5242880) {
             echo "<script>alert('Photo is large. Maximum picture size is 5MB.');</script>";
         } else {
-            $sql = "UPDATE Customers SET First_name='$First_name' Last_name='$Last_name' Phone_number='$Phone_number' 'ENTERpassword'='$ENTERpassword' Country='$Country' Email='$Email' photo='$photo_new_name'";
+            $sql = "UPDATE `Customers` SET `Customer_ID`='[Customer_ID-1]',`First_name`='[First_name-2]',`Last_name`='[Last_name-3]',`Phone_number`='[Phone_number-4]',`Country`='[Country-5]',`ENTERpassword`='[ENTERpassword-6]',`photo`='[photo-7]',`Email`='[Email-8]' WHERE 1";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 echo "<script>alert('Profile Updated successfully.');</script>";
@@ -38,44 +38,48 @@ if (isset($_POST["submit"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="Styles.css">
     <title>Profile Page</title>
 
 
 </head>
+
 <body class="profile-page">
     <div class="wrapper">
         <h2>Profile</h2>
         <form action="" method="post" enctype="multipart/form-data">
-            <?php 
-            
+            <?php
+
             $sql = "SELECT * FROM Customers";
-            $result = mysqli_query($con,$sql);
+            $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) { } }
-            ?> 
+                while ($row = mysqli_fetch_assoc($result)) {
+                }
+            }
+            ?>
             <div class="inputBox">
-                <input type="text" id="First_name" name="First_name" placeholder="First name" value="<?php /*echo $row['First_name']; */?>" required>
+                <input type="text" id="First_name" name="First_name" placeholder="First name" value="<?php /*echo $row['First_name']; */ ?>" required>
             </div>
             <div class="inputBox">
-                <input type="text" id="Last_name" name="Last_name" placeholder="Last name" value="<?php /*echo $row['Last_name']; */?>" required>
+                <input type="text" id="Last_name" name="Last_name" placeholder="Last name" value="<?php /*echo $row['Last_name']; */ ?>" required>
             </div>
             <div class="inputBox">
-                <input type="text" id="Phone_number" name="Phone_number" placeholder="Phone number" value="<?php /*echo $row['Phone_number']; */?>" required>
+                <input type="text" id="Phone_number" name="Phone_number" placeholder="Phone number" value="<?php /*echo $row['Phone_number']; */ ?>" required>
             </div>
             <div class="inputBox">
-                <input type="text" id="Country" name="Country" placeholder="Country" value="<?php /*echo $row['Country']; */?>" required>
+                <input type="text" id="Country" name="Country" placeholder="Country" value="<?php /*echo $row['Country']; */ ?>" required>
             </div>
             <div class="inputBox">
                 <input type="email" id="Email" name="Email" placeholder="Email Address" value="<?php /*echo $row['Email']; */ ?>" required>
             </div>
             <div class="inputBox">
-                <input type="password" id="ENTERpassword" name="ENTERpassword" placeholder="Password" value="<?php /*echo $row['ENTERpassword']; */?>" required>
+                <input type="password" id="ENTERpassword" name="ENTERpassword" placeholder="Password" value="<?php /*echo $row['ENTERpassword']; */ ?>" required>
             </div>
             <div class="inputBox">
                 <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" value="<?php /*echo $row['password']; */ ?>" required>
@@ -86,7 +90,7 @@ if (isset($_POST["submit"])) {
             </div>
             <img src="uploads/<?php echo $row["photo"]; ?>" width="150px" height="auto" alt="">
             <?php
-               /* }
+            /* }
             }
 */
             ?>
@@ -96,4 +100,5 @@ if (isset($_POST["submit"])) {
         </form>
     </div>
 </body>
+
 </html>
