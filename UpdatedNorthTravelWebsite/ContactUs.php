@@ -1,6 +1,24 @@
 <?php
 include "header.php";
 ?>
+<?php include 'connection.php'; 
+if(isset($_POST['send'])){
+    $First_Name = $_POST['First_Name'];
+    $Last_Name = $_POST['Last_Name'];
+    $Category = $_POST['Category'];
+    $Query_Details = $_POST['Query_Details'];
+    $sql="INSERT INTO Support (First_Name, Last_Name, Category, Query_Details) values ('$First_Name', '$Last_Name', '$Category', '$Query_Details')";
+    $result = mysqli_query($con,$sql);
+    if($result){
+        echo "We will get back to you as soon as possible";
+    
+    }else{
+        die(mysqli_error($con));
+    }
+    
+    }
+    ?>
+
       <div class="row">
         <div class="col-12">
             <main>
@@ -23,6 +41,7 @@ include "header.php";
       {  
           alert("Our phone is unavailable at this time due to technical issues");  
       }  
+      
       </script>
         <div class="grid-item"> 
            <img width="100px" height="100px" alt="location" src="https://img.icons8.com/ios/344/place-marker--v1.png">
@@ -47,18 +66,32 @@ include "header.php";
     </div>
 
     <aside>
+
+
+
     <div id=forms>
-        <form action="/action_page.php">
+        
+        <form name="Support" method="post" action="#">
+
+
           <label for="fname">First Name</label>
-          <input type="information" id="fname" name="firstname" placeholder="Your name..">
+          <input type="information" id="fname" name="First_Name" placeholder="Your name.." required>
+
       
           <label for="lname">Last Name</label>
-          <input type="information" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="sbj">Subject</label>
-          <input type="information" id="sbj" name="subject" placeholder="Write your request..">
-          <button type="button" id="demo" onclick="myjsfunction()">Submit</button>
-        
+          <input type="information" id="lname" name="Last_Name" placeholder="Your last name.." required>
+
+          <label for="sbj">Categoy</label>
+          <select name="Category"> <br>
+        <option value="Complaint"> Complaint </option>
+        <option value="Question"> Question </option>
+        </select>
+
+        <label for="query">Query Details</label>
+          <input type="information" id="query"name="Query_Details" placeholder="Enter your request.." required>
+
+          <button type="send" name="send" value="send" id="demo" onclick="myjsfunction()">Submit</button>
+
         <noscript>You need to enable JS to see this content.</noscript>
         </form>
       </div>
