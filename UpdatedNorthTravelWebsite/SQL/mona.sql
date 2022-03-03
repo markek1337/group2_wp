@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 20, 2022 at 01:23 PM
+-- Generation Time: Mar 03, 2022 at 03:47 PM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.15
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `monaSQL`
+-- Database: `app1`
 --
 
 -- --------------------------------------------------------
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `Booking` (
   `Book_ID` int NOT NULL,
   `Book_date` date NOT NULL,
-  `Customer ID` int NOT NULL,
-  `E-mail` int NOT NULL
+  `Customer_ID` int NOT NULL,
+  `Email` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -41,14 +41,14 @@ CREATE TABLE `Booking` (
 --
 
 CREATE TABLE `Customers` (
-  `Customer ID` int NOT NULL,
-  `First name` varchar(20) NOT NULL,
-  `Last name` varchar(20) NOT NULL,
-  `Phone number` varchar(20) NOT NULL,
+  `Customer_ID` int NOT NULL,
+  `First_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Last_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Phone_number` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Country` varchar(100) NOT NULL,
-  `Support_request_ID` int NOT NULL,
-  `E-mail` int NOT NULL,
-  `User ID` int NOT NULL
+  `ENTERpassword` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `photo` varchar(225) NOT NULL,
+  `Email` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -58,9 +58,25 @@ CREATE TABLE `Customers` (
 --
 
 CREATE TABLE `Newsletter` (
-  `E-mail` int NOT NULL,
-  `Status` varchar(100) NOT NULL
+  `Email` varchar(225) NOT NULL,
+  `Status` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'Subscribed'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `Newsletter`
+--
+
+INSERT INTO `Newsletter` (`Email`, `Status`) VALUES
+('', 'Subscribed'),
+('achaaoudmona@gmail.com', 'Subscribed'),
+('emma@gmail.com', 'Subscribed'),
+('founfoun@gmail.com', 'Subscribed'),
+('jij@gmail.com', 'Subscribed'),
+('jik@gmail.com', 'Subscribed'),
+('kaazm@gmail.com', 'Subscribed'),
+('lalaa@gmail.com', 'Subscribed'),
+('lana@gmail.com', 'Subscribed'),
+('mona21000@student.hamk.fi', 'Subscribed');
 
 -- --------------------------------------------------------
 
@@ -69,8 +85,8 @@ CREATE TABLE `Newsletter` (
 --
 
 CREATE TABLE `Payment Status` (
-  `Payment status` int NOT NULL,
-  `Payment description` varchar(100) DEFAULT NULL,
+  `Payment_status` int NOT NULL,
+  `Payment_description` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -83,9 +99,21 @@ CREATE TABLE `Payment Status` (
 CREATE TABLE `Support` (
   `Support_request_ID` int NOT NULL,
   `Category` enum('Question','Complaint') NOT NULL,
-  `Query_description` enum('Solved','Ongoing') NOT NULL,
+  `First_Name` varchar(20) NOT NULL,
+  `Last_Name` varchar(20) NOT NULL,
   `Query_details` varchar(225) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `Support`
+--
+
+INSERT INTO `Support` (`Support_request_ID`, `Category`, `First_Name`, `Last_Name`, `Query_details`) VALUES
+(7, 'Complaint', 'Mala', 'Lama', 'Mata'),
+(9, 'Complaint', 'Lala', 'tara', 'bara'),
+(10, 'Complaint', 'founfoun', 'tountoun', 'malki'),
+(41, 'Complaint', 'leila', 'diani', 'nadatoune'),
+(42, 'Complaint', 'louna', 'pp', 'jdapdamps');
 
 --
 -- Indexes for dumped tables
@@ -97,37 +125,40 @@ CREATE TABLE `Support` (
 ALTER TABLE `Booking`
   ADD PRIMARY KEY (`Book_ID`),
   ADD KEY `Book_date` (`Book_date`),
-  ADD KEY `Customer ID` (`Customer ID`),
-  ADD KEY `E-mail` (`E-mail`);
+  ADD KEY `Customer ID` (`Customer_ID`),
+  ADD KEY `Email` (`Email`);
 
 --
 -- Indexes for table `Customers`
 --
 ALTER TABLE `Customers`
-  ADD PRIMARY KEY (`Customer ID`),
-  ADD KEY `E-mail` (`E-mail`),
-  ADD KEY `Support_request_ID` (`Support_request_ID`);
+  ADD PRIMARY KEY (`Customer_ID`),
+  ADD KEY `Email` (`Email`),
+  ADD KEY `First_name` (`First_name`),
+  ADD KEY `Last_name` (`Last_name`);
 
 --
 -- Indexes for table `Newsletter`
 --
 ALTER TABLE `Newsletter`
-  ADD PRIMARY KEY (`E-mail`),
-  ADD KEY `E-mail` (`E-mail`);
+  ADD PRIMARY KEY (`Email`),
+  ADD KEY `Email` (`Email`);
 
 --
 -- Indexes for table `Payment Status`
 --
 ALTER TABLE `Payment Status`
-  ADD PRIMARY KEY (`Payment status`),
-  ADD KEY `Payment status` (`Payment status`);
+  ADD PRIMARY KEY (`Payment_status`),
+  ADD KEY `Payment status` (`Payment_status`);
 
 --
 -- Indexes for table `Support`
 --
 ALTER TABLE `Support`
   ADD PRIMARY KEY (`Support_request_ID`),
-  ADD KEY `Support_request_ID` (`Support_request_ID`);
+  ADD KEY `Support_request_ID` (`Support_request_ID`),
+  ADD KEY `First_Name` (`First_Name`),
+  ADD KEY `Last_Name` (`Last_Name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -143,25 +174,19 @@ ALTER TABLE `Booking`
 -- AUTO_INCREMENT for table `Customers`
 --
 ALTER TABLE `Customers`
-  MODIFY `Customer ID` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `Newsletter`
---
-ALTER TABLE `Newsletter`
-  MODIFY `E-mail` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Customer_ID` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Payment Status`
 --
 ALTER TABLE `Payment Status`
-  MODIFY `Payment status` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Payment_status` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Support`
 --
 ALTER TABLE `Support`
-  MODIFY `Support_request_ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Support_request_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
