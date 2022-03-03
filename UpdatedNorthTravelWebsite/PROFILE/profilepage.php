@@ -10,6 +10,10 @@ if (isset($_POST["submit"])) {
     $Email = mysqli_real_escape_string($con, $_POST["Email"]);
     $ENTERpassword = mysqli_real_escape_string($con, md5($_POST["ENTERpassword"]));
     $cpassword = mysqli_real_escape_string($con, md5($_POST["cpassword"]));
+  /*  $sql = "INSERT INTO `Customers`(`Customer_ID`, `First_name`, `Last_name`, `Phone_number`, `Country`, `ENTERpassword`, `photo`, `Email`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]')"; 
+      $sql = "INSERT INTO `Customers`(`First_name`, `Last_name`, `Phone_number`, `Country`, `ENTERpassword`, `photo`, `Email`) VALUES ('[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]')"; 
+*/
+
 
     if ($ENTERpassword === $cpassword) {
         $photo_name = mysqli_real_escape_string($con, $_FILES["photo"]["name"]);
@@ -20,7 +24,7 @@ if (isset($_POST["submit"])) {
         if ($photo_size > 5242880) {
             echo "<script>alert('Photo is large. Maximum picture size is 5MB.');</script>";
         } else {
-            $sql = "UPDATE `Customers` SET `Customer_ID`='[Customer_ID-1]',`First_name`='[First_name-2]',`Last_name`='[Last_name-3]',`Phone_number`='[Phone_number-4]',`Country`='[Country-5]',`ENTERpassword`='[ENTERpassword-6]',`photo`='[photo-7]',`Email`='[Email-8]' WHERE 1";
+            $sql = "UPDATE `Customers` SET `Customer_ID`='[value-1]',`First_name`='[value-2]',`Last_name`='[value-3]',`Phone_number`='[value-4]',`Country`='[value-5]',`ENTERpassword`='[value-6]',`photo`='[value-7]',`Email`='[value-8]' WHERE 1";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 echo "<script>alert('Profile Updated successfully.');</script>";
