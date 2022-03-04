@@ -58,7 +58,7 @@
 						<i  style="position:relative; top:20px; left:70px; color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
 						<br>
 						<a class="btn" href="index.php?logout='1'" style="position:relative; left:280px; bottom:10px; padding:7px; color:white; background: #44df9e;">Log out</a>
-                       &nbsp; <a class="btn" href="profile.php" style="position:relative; left:280px; bottom:10px; padding:7px; color:white;  background: #58b8df;">Profile</a>
+                       &nbsp; <a class="btn" href="PROFILE/profilepage.php" style="position:relative; left:280px; bottom:10px; padding:7px; color:white;  background: #58b8df;">Profile</a>
 					</small>
 
 				<?php endif ?>
