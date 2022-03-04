@@ -56,7 +56,21 @@ if (isset($_POST["submit"])) {
 <body class="profile-page">
     <div class="wrapper">
         <h2>Profile</h2>
-        <form action="" method="post" enctype="multipart/form-data">
+
+        <script>  
+function validate()  
+{  
+var x=document.Customers.Email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+</script> 
+
+        <form action="" name=Customers method="post" enctype="multipart/form-data" onsubmit="return validate();">
             <?php
 
             $sql = "SELECT * FROM Customers";
