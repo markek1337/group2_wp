@@ -71,8 +71,8 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 </script> 
 
         <form action="" name=Customers method="post" enctype="multipart/form-data" onsubmit="return validate();">
+        
             <?php
-
             $sql = "SELECT * FROM Customers";
             $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) > 0) {
