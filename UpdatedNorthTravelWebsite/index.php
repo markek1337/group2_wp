@@ -3,27 +3,7 @@ include('Login/register/php-main.php');
 include "header.php";
 include "popup.php";
 ?>
-<head>
-	<title>M</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
-	<!-- Styling for public area -->
-	<link rel="stylesheet" href="static/css/public_styling.css">
-	<meta charset="UTF-8">
-</head>
-<div class="content">
-		<!-- notification message -->
-		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" >
-				<h3>
-					<?php 
-						echo $_SESSION['success']; 
-						unset($_SESSION['success']);
-					?>
-				</h3>
-			</div>
-		<?php endif ?>
+
           <!-- Responsive header-->
           <header class="header">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -198,8 +178,8 @@ include "popup.php";
                     </div>
                 </section>
                 <section class="footer-sec">
-                  <!--Footer-->
-                  <?php
-include "footer.php";
-?>
-            </main>
+    <!--Footer-->
+    <?php
+      include "footer.php";
+    ?>
+    </main>
