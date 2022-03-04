@@ -45,11 +45,9 @@ function register(){
 
 			$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "Log in was successful!";
-			header('location: ../../index.php');				
 		}
 	}
 }
-
 // return user array from their id
 function getUserById($user_ID){
 	global $db;
@@ -144,3 +142,4 @@ function isAdmin()
 		return false;
 	}
 }
+?>

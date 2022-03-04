@@ -1,4 +1,5 @@
 <?php
+include('../php-main.php');
 include "header.php";
 ?>
 <body>
