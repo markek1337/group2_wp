@@ -36,6 +36,7 @@
                     <li><a class="dropdown-item" href="swedenpage.php">Sweden</a></li>
                     <li><a class="dropdown-item" href="icelandpage.php">Iceland</a></li>
                     <li><a class="dropdown-item" href="norwaypage.php">Norway</a></li>
+                    <li><a class="dropdown-item" href="Login/register/admin/pricelist/pricelist.docx">Download our pricelist</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
