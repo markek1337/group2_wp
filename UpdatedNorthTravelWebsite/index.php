@@ -1,7 +1,7 @@
 <?php
 include('Login/register/php-main.php');
-include "header.php";
 include "popup.php";
+include "header.php";
 ?>
 <head>
 	<title>M</title>

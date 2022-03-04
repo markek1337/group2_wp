@@ -80,6 +80,9 @@ function display_error() {
 function isLoggedIn()
 {
 	if (isset($_SESSION['user'])) {
+		$_SESSION['valid'] = true;
+        $_SESSION['timeout'] = time();
+		$_SESSION['username'] = $username;
 		return true;
 	}else{
 		return false;
@@ -88,6 +91,7 @@ function isLoggedIn()
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
+	unset($_SESSION['valid']);
 	header("location: Login/register/register.php");
 }
 // call the login() function if register_btn is clicked
