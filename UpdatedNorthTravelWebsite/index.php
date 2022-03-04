@@ -1,6 +1,7 @@
 <?php
-include('multi_login/register/php-main.php');
+include('Login/register/php-main.php');
 include "header.php";
+include "popup.php";
 ?>
 <head>
 	<title>M</title>
