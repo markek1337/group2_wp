@@ -1,6 +1,6 @@
 <?php 
 
-$con = new mysqli('db', 'app1','barakamenchips', 'app1');
+$con = new mysqli('db', 'root', 'password', 'project_db');
 
 
 if(!$con){

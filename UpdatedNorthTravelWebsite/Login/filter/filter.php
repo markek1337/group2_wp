@@ -2,6 +2,7 @@
 include('../register/php-main.php');
 include "header.php";
 ?>
+
 <body>
     
     <div class="container">
@@ -23,7 +24,7 @@ include "header.php";
                                 <button type="submit" class="btn btn-sm float-end" style="background-color:#1cb49a; color:white;">Search</button>
                             </h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="border:none;">
                             <?php
                                 $con = mysqli_connect("db","root","password","project_db");
                                 ?>
