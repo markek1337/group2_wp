@@ -62,7 +62,9 @@
                 <!-- Themes-->
                 <li>
                   <a class="btn btn-primary nav-btn" href="multi_login/register/register.php" role="button" style="background-color:#1cb49a; margin-left: 100%; border:none; padding:10px; margin-top:5px;">Register</a>
+                  <a class="btn btn-primary nav-btn" href="PROFILE/profilepage.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">My profile</a>
                   <a class="btn btn-primary nav-btn" href="multi_login/filter/filter.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Filter Search</a>
+
                 </li>
               </ul>
             </div>
