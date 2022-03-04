@@ -1,5 +1,5 @@
 <?php
-include('../php-main.php');
+include('../register/php-main.php');
 include "header.php";
 ?>
 <body>
