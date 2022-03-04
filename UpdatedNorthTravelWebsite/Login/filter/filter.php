@@ -24,7 +24,7 @@ include "header.php";
                         </div>
                         <div class="card-body">
                             <?php
-                                $con = mysqli_connect("db","root","password","multi_login");
+                                $con = mysqli_connect("db","root","password","project_db");
                                 ?>
                                 <h6>Countries</h6>
                                 <hr>

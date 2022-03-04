@@ -2,7 +2,7 @@
 session_start();
 
 // A script to connect to a database
-$db = mysqli_connect('db', 'root', 'password', 'multi_login');
+$db = mysqli_connect('db', 'root', 'password', 'project_db');
 
 
 $username = "";

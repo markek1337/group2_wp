@@ -62,7 +62,7 @@
                 </li>
                 <!-- Themes-->
                 <li>
-                <?php if (isset($_SESSION['success'])) : ?>
+                <?php  if (isset($_SESSION['user'])) : ?>
                   <a class="btn btn-primary nav-btn" href="../register/register.php" role="button" style="background-color:#1cb49a; margin-left: 30%; border:none; padding:10px; margin-top:5px;">Profile</a>
                   <a class="btn btn-primary nav-btn" href="../filter/filter.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Cart</a>
                   <a class="btn btn-primary nav-btn" href="../filter/filter.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Filter Search</a>
@@ -72,7 +72,7 @@
                 <?php else : ?>
                   <a class="btn btn-primary nav-btn" href="../register/register.php" role="button" style="background-color:#1cb49a; margin-left: 100%; border:none; padding:10px; margin-top:5px;">Register</a>
                   <a class="btn btn-primary nav-btn" href="../filter/filter.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Filter Search</a>
-                 <?php endif ?>
+                <?php endif ?>
                 </li>
               </ul>
             </div>
