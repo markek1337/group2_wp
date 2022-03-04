@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 03, 2022 at 03:47 PM
+-- Generation Time: Mar 04, 2022 at 09:06 AM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.15
 
@@ -47,8 +47,8 @@ CREATE TABLE `Customers` (
   `Phone_number` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Country` varchar(100) NOT NULL,
   `ENTERpassword` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `photo` varchar(225) NOT NULL,
-  `Email` varchar(225) NOT NULL
+  `Email` varchar(225) NOT NULL,
+  `photo` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -67,10 +67,11 @@ CREATE TABLE `Newsletter` (
 --
 
 INSERT INTO `Newsletter` (`Email`, `Status`) VALUES
-('', 'Subscribed'),
 ('achaaoudmona@gmail.com', 'Subscribed'),
+('bass@gmail.com', 'Subscribed'),
 ('emma@gmail.com', 'Subscribed'),
 ('founfoun@gmail.com', 'Subscribed'),
+('HOME@gmail.com', 'Subscribed'),
 ('jij@gmail.com', 'Subscribed'),
 ('jik@gmail.com', 'Subscribed'),
 ('kaazm@gmail.com', 'Subscribed'),
@@ -113,7 +114,8 @@ INSERT INTO `Support` (`Support_request_ID`, `Category`, `First_Name`, `Last_Nam
 (9, 'Complaint', 'Lala', 'tara', 'bara'),
 (10, 'Complaint', 'founfoun', 'tountoun', 'malki'),
 (41, 'Complaint', 'leila', 'diani', 'nadatoune'),
-(42, 'Complaint', 'louna', 'pp', 'jdapdamps');
+(42, 'Complaint', 'louna', 'pp', 'jdapdamps'),
+(43, 'Complaint', 'bass', 'bass', 'bass');
 
 --
 -- Indexes for dumped tables
@@ -174,7 +176,7 @@ ALTER TABLE `Booking`
 -- AUTO_INCREMENT for table `Customers`
 --
 ALTER TABLE `Customers`
-  MODIFY `Customer_ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Customer_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `Payment Status`
@@ -186,9 +188,10 @@ ALTER TABLE `Payment Status`
 -- AUTO_INCREMENT for table `Support`
 --
 ALTER TABLE `Support`
-  MODIFY `Support_request_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `Support_request_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
