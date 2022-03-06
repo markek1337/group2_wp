@@ -64,7 +64,7 @@
                 <li>
                 <?php  if (isset($_SESSION['user'])) : ?>
                   <a class="btn btn-primary nav-btn" href="PROFILE/profilepage.php" role="button" style="background-color:#1cb49a; margin-left: 30%; border:none; padding:10px; margin-top:5px;">Profile</a>
-                  <a class="btn btn-primary nav-btn" href="" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Cart</a>
+                  <a class="btn btn-primary nav-btn" href="../shopping/products.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Cart</a>
                   <a class="btn btn-primary nav-btn" href="../filter/filter.php" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Filter Search</a>
                   <a class="btn btn-primary nav-btn" href="../../index.php?logout='1'" role="button" style="background-color:#4f7fa3; border:none; padding:10px; margin-top:5px;">Log out</a>
 
