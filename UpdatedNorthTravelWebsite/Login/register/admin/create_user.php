@@ -30,9 +30,8 @@
 	</div>
 	
 	<form method="post" action="create_user.php" style="border-top:none; position:relative; top:30px; left: 450px">
-
-		<?php echo display_error(); ?>
-
+		<p style="color:red;"><?php echo display_error(); ?></p>
+	
 		<div class="input-group">
 			<label>Username</label>
 			<input type="text" name="username" value="<?php echo $username; ?>">

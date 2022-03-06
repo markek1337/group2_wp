@@ -27,7 +27,7 @@
             </div>
          
             <div class="form-inner">
-            <form method="post" action="register.php" class="login">
+            <form method="post" action="register.php" class="login" style="color:red !important">
             <?php echo display_error(); ?>
                   <div style="margin-bottom:0px;margin-left:2px;"><label>Username</label></div>
                   <div class="field" style="margin-bottom:0px;margin-top:10px;">
