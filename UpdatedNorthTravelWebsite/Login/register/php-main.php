@@ -51,18 +51,6 @@ function register(){
 			$insert_query = "INSERT INTO users (username, email, user_type, password) 
 					  VALUES('$username', '$email', 'user', '$password')";
 			mysqli_query($db, $insert_query);
-			$sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
-
-			if ($result = $conn->query($sql)) {
-				global $user_ID;
-				$user_ID = $result->fetch_assoc()["user_ID"];
-				$_SESSION["user_ID"] = $user_ID;
-				open_info_page(
-					title: "Success",
-					message: "You have successfully loggged in with user UID $user_ID!",
-					button_url: "index.php",
-					button_text: "Go home"
-				);}
 
 			// get id of the created user
 			$logged_in_user_id = mysqli_insert_id($db);
@@ -135,20 +123,25 @@ function login(){
 
 	// attempt login if no errors on form
 	if (count($errors) == 0) {
+		global $user_ID;
 		$password = md5($password);
-
 		$select_query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
 		$results = mysqli_query($db, $select_query);
-
+		$select_query2 = "SELECT user_ID FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+		$results2 = mysqli_query($db, $select_query2);
 		if (mysqli_num_rows($results) == 1) { // user found
 			// check if user is admin or user
 			$logged_in_user = mysqli_fetch_assoc($results);
+			$user_ID = mysqli_fetch_assoc($results2)["user_ID"];
+
 			if ($logged_in_user['user_type'] == 'admin') {
 			// goes to admin page
+				$_SESSION["user_ID"] = $user_ID;
 				$_SESSION['user'] = $logged_in_user;
 				$_SESSION['success']  = "Log in was successful!";
 				header('location: admin/home.php');		  
 			}else{ // goes to user page
+				$_SESSION["user_ID"] = $user_ID;
 				$_SESSION['user'] = $logged_in_user;
 				$_SESSION['success']  = "Log in was successful!";
 				header('location: ../../index.php');
