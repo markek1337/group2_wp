@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+ phpMyAdmin SQL Dump
 -- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 04, 2022 at 09:06 AM
+-- Generation Time: Mar 06, 2022 at 08:20 AM
 -- Server version: 8.0.27
 -- PHP Version: 8.0.15
 
@@ -24,19 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Booking`
---
-
-CREATE TABLE `Booking` (
-  `Book_ID` int NOT NULL,
-  `Book_date` date NOT NULL,
-  `Customer_ID` int NOT NULL,
-  `Email` varchar(225) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `Customers`
 --
 
@@ -50,6 +37,13 @@ CREATE TABLE `Customers` (
   `Email` varchar(225) NOT NULL,
   `photo` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `Customers`
+--
+
+INSERT INTO `Customers` (`Customer_ID`, `First_name`, `Last_name`, `Phone_number`, `Country`, `ENTERpassword`, `Email`, `photo`) VALUES
+(24, 'Loni', 'Mona', '0412356799', 'Finland', 'a738458135b173ce1ba0bd9dd4f70b3e', 'loni@gmail.com', '854179227media.png');
 
 -- --------------------------------------------------------
 
@@ -82,18 +76,6 @@ INSERT INTO `Newsletter` (`Email`, `Status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Payment Status`
---
-
-CREATE TABLE `Payment Status` (
-  `Payment_status` int NOT NULL,
-  `Payment_description` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `Date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `Support`
 --
 
@@ -122,15 +104,6 @@ INSERT INTO `Support` (`Support_request_ID`, `Category`, `First_Name`, `Last_Nam
 --
 
 --
--- Indexes for table `Booking`
---
-ALTER TABLE `Booking`
-  ADD PRIMARY KEY (`Book_ID`),
-  ADD KEY `Book_date` (`Book_date`),
-  ADD KEY `Customer ID` (`Customer_ID`),
-  ADD KEY `Email` (`Email`);
-
---
 -- Indexes for table `Customers`
 --
 ALTER TABLE `Customers`
@@ -147,13 +120,6 @@ ALTER TABLE `Newsletter`
   ADD KEY `Email` (`Email`);
 
 --
--- Indexes for table `Payment Status`
---
-ALTER TABLE `Payment Status`
-  ADD PRIMARY KEY (`Payment_status`),
-  ADD KEY `Payment status` (`Payment_status`);
-
---
 -- Indexes for table `Support`
 --
 ALTER TABLE `Support`
@@ -167,22 +133,10 @@ ALTER TABLE `Support`
 --
 
 --
--- AUTO_INCREMENT for table `Booking`
---
-ALTER TABLE `Booking`
-  MODIFY `Book_ID` int NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `Customers`
 --
 ALTER TABLE `Customers`
-  MODIFY `Customer_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
---
--- AUTO_INCREMENT for table `Payment Status`
---
-ALTER TABLE `Payment Status`
-  MODIFY `Payment_status` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Customer_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `Support`
@@ -194,4 +148,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
