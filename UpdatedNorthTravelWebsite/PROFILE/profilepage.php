@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
         } else {
             $sql = "INSERT INTO Customers (First_name, Last_name, Phone_number, Country, ENTERpassword, Email, photo) 
             VALUES('$First_name', '$Last_name', '$Phone_number', '$Country', '$ENTERpassword', '$Email', '$photo_new_name')";
-          //  $sql= "INSERT INTO users(ENTERpassword) VALUES ($password)";
+         //   $sql= "INSERT INTO users(password) VALUES ($ENTERpassword)";
 
             $sql = "UPDATE users SET password= '$ENTERpassword'";
             $sql = "UPDATE Customers SET First_name= '$First_name', Last_name='$Last_name', Phone_number='$Phone_number', Country='$Country', ENTERpassword='$ENTERpassword',`Email`='$Email' WHERE 1";
