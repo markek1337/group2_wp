@@ -2,7 +2,8 @@
 session_start();
 
 // A script to connect to a database
-$db = mysqli_connect('db', 'root', 'password', 'project_db');
+// $db = mysqli_connect('db', 'root', 'password', 'project_db');
+$con = new mysqli('db', 'app1','barakamenchips', 'app1');
 
 
 $username = "";
@@ -16,12 +17,12 @@ if (isset($_POST['register_btn'])) {
 
 // Register
 function register(){
-	global $db, $errors, $username, $email;
+	global $con, $errors, $username, $email;
 	
-	$username    =  mysqli_real_escape_string($db, $_POST["username"]);
-	$email       =  mysqli_real_escape_string($db, $_POST["email"]);
-	$password_1  =  mysqli_real_escape_string($db, $_POST["password_1"]);
-	$password_2  =  mysqli_real_escape_string($db, $_POST["password_2"]);
+	$username    =  mysqli_real_escape_string($con, $_POST["username"]);
+	$email       =  mysqli_real_escape_string($con, $_POST["email"]);
+	$password_1  =  mysqli_real_escape_string($con, $_POST["password_1"]);
+	$password_2  =  mysqli_real_escape_string($con, $_POST["password_2"]);
 	
 	if (empty($username)) { 
 		array_push($errors, "Username is required"); 
@@ -41,19 +42,19 @@ function register(){
 		$password = md5($password_1);//encrypt the password before saving in the database
 
 		if (isset($_POST['user_type'])) {
-			$user_type = mysqli_real_escape_string($db, $_POST["user_type"]);
+			$user_type = mysqli_real_escape_string($con, $_POST["user_type"]);
 			$insert_query = "INSERT INTO users (username, email, user_type, password) 
 					  VALUES('$username', '$email', '$user_type', '$password')";
-			mysqli_query($db, $insert_query);
+			mysqli_query($con, $insert_query);
 			$_SESSION['success']  = "New user successfully created!";
 			header('location: admin/home.php');
 		}else{
 			$insert_query = "INSERT INTO users (username, email, user_type, password) 
 					  VALUES('$username', '$email', 'user', '$password')";
-			mysqli_query($db, $insert_query);
+			mysqli_query($con, $insert_query);
 
 			// get id of the created user
-			$logged_in_user_id = mysqli_insert_id($db);
+			$logged_in_user_id = mysqli_insert_id($con);
 
 			$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "Log in was successful!";
@@ -62,9 +63,9 @@ function register(){
 }
 // return user array from their id
 function getUserById($user_ID){
-	global $db;
+	global $con;
 	$select_query = "SELECT * FROM users WHERE user_ID=" . $user_ID;
-	$result = mysqli_query($db, $select_query);
+	$result = mysqli_query($con, $select_query);
 
 	$user = mysqli_fetch_assoc($result);
 	return $user;
@@ -72,8 +73,8 @@ function getUserById($user_ID){
 
 // escape string
 function e($val){
-	global $db;
-	return mysqli_real_escape_string($db, trim($val));
+	global $con;
+	return mysqli_real_escape_string($con, trim($val));
 }
 
 function display_error() {
@@ -107,7 +108,7 @@ if (isset($_POST['login_btn'])) {
 
 // LOGIN USER
 function login(){
-	global $db, $username, $errors;
+	global $con, $username, $errors;
 
 	// grap form values
 	$username = e($_POST['username']);
@@ -126,9 +127,9 @@ function login(){
 		global $user_ID;
 		$password = md5($password);
 		$select_query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
-		$results = mysqli_query($db, $select_query);
+		$results = mysqli_query($con, $select_query);
 		$select_query2 = "SELECT user_ID FROM users WHERE username='$username' AND password='$password' LIMIT 1";
-		$results2 = mysqli_query($db, $select_query2);
+		$results2 = mysqli_query($con, $select_query2);
 		if (mysqli_num_rows($results) == 1) { // user found
 			// check if user is admin or user
 			$logged_in_user = mysqli_fetch_assoc($results);
