@@ -31,11 +31,11 @@
             <?php echo display_error(); ?>
                   <div style="margin-bottom:0px;margin-left:2px;"><label>Username</label></div>
                   <div class="field" style="margin-bottom:0px;margin-top:10px;">
-                     <input type="text" name="username" >
+                     <input type="text" name="username" required>
                   </div>
                   <div style="margin-top:10px;margin-left:2px;"><label>Password</label></div>
                   <div class="field" style="margin-bottom:0px;margin-top:10px;">
-                     <input type="password" name="password">
+                     <input type="password" name="password" required>
                   </div>
 
                   <div class="field btn">
@@ -50,19 +50,19 @@
                   <?php echo display_error(); ?>  
                      <div style="margin-bottom:0px;margin-left:2px;"><label>Username</label></div>
                      <div class="field"  style="margin-bottom:0px;margin-top:10px;">
-                        <input type="text" name="username" value="<?php echo $username; ?>">
+                        <input required type="text" name="username" value="<?php echo $username; ?>">
                      </div>
                      <div style="margin-bottom:0px;margin-top:10px;margin-left:2px;"><label>Email</label></div>
                      <div class="field" style="margin-bottom:0px;margin-top:10px;">
-                     <input type="email" name="email" value="<?php echo $email; ?>">
+                     <input required type="email" name="email" value="<?php echo $email; ?>">
                      </div>
                      <div style="margin-bottom:0px;margin-top:10px;margin-left:2px;"><label>Password</label></div>
                      <div class="field" style="margin-bottom:0px;margin-top:10px;">
-                        <input type="password" name="password_1">
+                        <input required type="password" name="password_1">
                      </div>
                      <div style="margin-bottom:0px;margin-top:10px;margin-left:2px;"><label>Retype password</label></div>
                      <div class="field" style="margin-bottom:0px;margin-top:10px;">
-                        <input type="password" name="password_2">
+                        <input required type="password" name="password_2">
                      </div>
                      <div class="field btn">
               <div class="btn-layer">
