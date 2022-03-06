@@ -63,7 +63,7 @@ include "header.php";
         <div id=email>
             <!-- <label for="email"></label>
             <input type="info" id="email" name="enteremail" placeholder="Your email adress is..">   -->
-            <button type="button">Book</button>
+            <a href="shopping/products.php"> <button type="button" href="shopping/products.php">Book</button></a>
         </div>
     </div>
 </aside>
