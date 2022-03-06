@@ -61,8 +61,8 @@ include "header.php";
     <div id=booking>
         <header><b>Book a trip</b></header>
         <div id=email>
-            <label for="email"></label>
-            <input type="info" id="email" name="enteremail" placeholder="Your email adress is..">  
+            <!-- <label for="email"></label>
+            <input type="info" id="email" name="enteremail" placeholder="Your email adress is..">   -->
             <button type="button">Book</button>
         </div>
     </div>
