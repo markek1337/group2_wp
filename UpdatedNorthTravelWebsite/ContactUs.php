@@ -30,7 +30,10 @@ if(isset($_POST['send'])){
       <button type="button" style="float: left;  width: 200px; padding-right: 20px; margin-bottom: 40px; margin-left: 450px; margin-right: 20px;" class="btn btn-dark" onclick="document.getElementById('header_image').style.display='none'">"Image not working? Click me to hide it!"</button>
       <button type="button" style="float: right;  width: 200px; padding-left: 20px; margin-bottom: 40px; margin-right: 450px; margin-left: 20px;" class="btn btn-dark" onclick="document.getElementById('header_image').style.display='inline-flex'">"Show the image again!"</button>
       </div>
-
+      <div><h3>lmao</h3></div>
+      <?php
+      echo $user_ID;
+      ?>
       
 
       <div class="grid-container">

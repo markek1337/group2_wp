@@ -39,6 +39,18 @@ function register(){
 			$insert_query = "INSERT INTO users (username, email, user_type, password) 
 					  VALUES('$username', '$email', 'user', '$password')";
 			mysqli_query($db, $insert_query);
+			$sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+
+			if ($result = $conn->query($sql)) {
+				global $user_ID;
+				$user_ID = $result->fetch_assoc()["user_ID"];
+				$_SESSION["user_ID"] = $user_ID;
+				open_info_page(
+					title: "Success",
+					message: "You have successfully loggged in with user UID $user_ID!",
+					button_url: "index.php",
+					button_text: "Go home"
+				);}
 
 			// get id of the created user
 			$logged_in_user_id = mysqli_insert_id($db);

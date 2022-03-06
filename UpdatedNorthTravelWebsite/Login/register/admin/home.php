@@ -22,26 +22,26 @@ if (isset($_GET['logout'])) {
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body style="background: white;">
-	<div class="adminhome" style="width: 30%;
-	margin: auto 0px;
+<div class="adminhome" style="width: 30%;
+	margin: 50px auto 0px;
 	font-family: Roboto;
 	font-weight: bold;	
 	color: white;
 	background: -webkit-linear-gradient(top, #58b8df, #44df9e);
 	text-align: center;
+	border-color:black;
+	border: 2px;
 	border-radius: 20px 10px 0px 0px;
 	padding: 20px;">
 		<h2>Admin page</h2>
 	</div>
 	<div class="content" style="
-	position: absolute;
-	top:32%;
 	width: 30%;
 	font-family: Roboto;
 	font-weight: bold;
 	margin: 0px auto;
 	padding: 20px;
-	background-color: white;
+	background: white;
 	border-radius: 0px 0px 20px 20px;
 ">
 		<!-- notification message -->
@@ -67,9 +67,9 @@ if (isset($_GET['logout'])) {
 					<small>
 						<i  style="position:relative; top:10px; color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
 						<br>
-						<a class="btn" href="home.php?logout='1'" style="position:relative; left:130px; bottom:15px; padding:7px; background: #44df9e;">Log out</a>
-                       &nbsp; <a class="btn" href="create_user.php" style="position:relative; left:130px; bottom:15px; padding:7px;   background: #58b8df;"> Create a user</a>
-					   &nbsp; <a class="btn" href="prices.php" style="position:relative; left:130px; bottom:15px; padding:7px;   background: #58b8df;"> Add pricelist</a>
+						<a class="btn" href="home.php?logout='1'" style="position:relative; left:130px; bottom:15px; color: white; padding:7px; background: #44df9e;">Log out</a>
+                       &nbsp; <a class="btn" href="create_user.php" style="position:relative; left:130px; bottom:15px; color: white; padding:7px;   background: #58b8df;"> Create a user</a>
+					   &nbsp; <a class="btn" href="prices.php" style="position:relative; left:130px; bottom:15px; color: white; padding:7px;   background: #58b8df;"> Add pricelist</a>
 
 					</small>
 
