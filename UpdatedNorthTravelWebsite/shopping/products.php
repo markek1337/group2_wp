@@ -2,6 +2,7 @@
 include "../Login/register/php-main.php";
 include "head_and_footer/header.php";
 
+// variable to store id of user in the current session
 $user_ID = $_SESSION["user_ID"];
 
 if(isset($_POST['add_to_cart'])) {
@@ -10,12 +11,14 @@ if(isset($_POST['add_to_cart'])) {
     $product_image = $_POST['product_image'];
     $product_quantity = $_POST['product_quantity'];
 
+    // query to select all items from the cart which this user has put in
     $select_cart = mysqli_query($db, "SELECT * FROM shopping_cart WHERE product_name = '$product_name' AND
     user_ID = '$user_ID'") or die ('query 2 failed');
 
+    // check if the item has been added before
     if(mysqli_num_rows($select_cart) > 0) {
         echo "Product already added to the cart!";
-    } else {
+    } else { // query if the item is going to be added for the first time
     mysqli_query($db, "INSERT INTO shopping_cart (user_ID, product_name, price, image, quantity) VALUES
     ('$user_ID', '$product_name', '$product_price', '$product_image', '$product_quantity')")
     or die ('query 1 failed');
@@ -45,9 +48,11 @@ if(isset($_GET['delete_all'])) {
 
 ?>
 
+<!-- Products in the shopping cart -->
 <div class="products">
     <div class="box-container" style="display: flex; flex-wrap: wrap; gap:15px; justify-content: center;">
         <?php
+            // retrieve data from destination table to show the name, price and image of the destinations
             $select_product = mysqli_query($db, "SELECT * FROM destinations")
             or die ('query failed');
             if (mysqli_num_rows($select_product) > 0) {
@@ -70,6 +75,7 @@ if(isset($_GET['delete_all'])) {
     </div>
 </div>
 
+<!-- Shopping Cart -->
 <div class="shopping-cart" style="padding: 20px 0;">
     <h1 class="heading" style="">Shopping cart</h1>
 
@@ -83,7 +89,9 @@ if(isset($_GET['delete_all'])) {
         </thead>
         <tbody style="border: solid; border-radius: 5px">
         <?php
+            // decalring a total price variable
             $total = 0;
+            // query to display items added by the ueser in the shopping cart
             $cart_query = mysqli_query($db, "SELECT * FROM shopping_cart WHERE user_ID = '$user_ID'")
             or die ('query id failed');
             if (mysqli_num_rows($cart_query) > 0) {

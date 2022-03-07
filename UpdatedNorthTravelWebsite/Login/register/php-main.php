@@ -2,8 +2,8 @@
 session_start();
 
 // A script to dbnect to a database
-// $db = mysqli_dbnect('db', 'root', 'password', 'project_db');
-$db = mysqli_connect('localhost', 'bbcap21_2', 'GiiRRcCD', 'wp_bbcap21_2');
+// $db = mysqli_dbnect('db', 'root', 'password', 'project_db'); // local database
+$db = mysqli_connect('localhost', 'bbcap21_2', 'GiiRRcCD', 'wp_bbcap21_2'); // shell.hamk.fi database
 $username = "";
 $email    = "";
 $errors   = array(); 
