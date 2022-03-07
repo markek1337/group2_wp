@@ -3,16 +3,16 @@
 include 'connection.php';
 
 if (isset($_POST["submit"])) {
-    $First_name = mysqli_real_escape_string($con, $_POST["First_name"]);
-    $Last_name = mysqli_real_escape_string($con, $_POST["Last_name"]);
-    $Phone_number = mysqli_real_escape_string($con, $_POST["Phone_number"]);
-    $Country = mysqli_real_escape_string($con, $_POST["Country"]);
-    $Email = mysqli_real_escape_string($con, $_POST["Email"]);
-    $ENTERpassword = mysqli_real_escape_string($con, md5($_POST["ENTERpassword"]));
-    $cpassword = mysqli_real_escape_string($con, md5($_POST["cpassword"]));
+    $First_name = mysqli_real_escape_string($db, $_POST["First_name"]);
+    $Last_name = mysqli_real_escape_string($db, $_POST["Last_name"]);
+    $Phone_number = mysqli_real_escape_string($db, $_POST["Phone_number"]);
+    $Country = mysqli_real_escape_string($db, $_POST["Country"]);
+    $Email = mysqli_real_escape_string($db, $_POST["Email"]);
+    $ENTERpassword = mysqli_real_escape_string($db, md5($_POST["ENTERpassword"]));
+    $cpassword = mysqli_real_escape_string($db, md5($_POST["cpassword"]));
 
     if ($ENTERpassword === $cpassword) {
-        $photo_name = mysqli_real_escape_string($con, $_FILES["photo"]["name"]);
+        $photo_name = mysqli_real_escape_string($db, $_FILES["photo"]["name"]);
         $photo_tmp_name = $_FILES["photo"]["tmp_name"];
         $photo_size = $_FILES["photo"]["size"];
         $photo_new_name = rand() . $photo_name;
@@ -27,13 +27,13 @@ if (isset($_POST["submit"])) {
             $sql = "UPDATE users SET password= '$ENTERpassword'";
             $sql = "UPDATE Customers SET First_name= '$First_name', Last_name='$Last_name', Phone_number='$Phone_number', Country='$Country', ENTERpassword='$ENTERpassword',`Email`='$Email' WHERE 1";
 
-            $result = mysqli_query($con, $sql);
+            $result = mysqli_query($db, $sql);
             if ($result) {
                 echo "<script>alert('Profile Updated successfully.');</script>";
                 move_uploaded_file($photo_tmp_name, "uploads/" . $photo_new_name);
             } else {
                 echo "<script>alert('Profile can not be Updated.');</script>";
-                echo  $con->error;
+                echo  $db->error;
             }
         }
     } else {
@@ -77,7 +77,7 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 
             <?php
             $sql = "SELECT * FROM Customers";
-            $result = mysqli_query($con, $sql);
+            $result = mysqli_query($db, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                 }

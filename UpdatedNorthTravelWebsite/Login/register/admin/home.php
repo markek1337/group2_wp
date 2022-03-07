@@ -37,6 +37,8 @@ if (isset($_GET['logout'])) {
 	</div>
 	<div class="content" style="
 	width: 30%;
+	position:relative;
+	top:-130px;
 	font-family: Roboto;
 	font-weight: bold;
 	margin: 0px auto;
@@ -46,7 +48,7 @@ if (isset($_GET['logout'])) {
 ">
 		<!-- notification message -->
 		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" style="position:relative; left:50px; color: #44df9e; width:360px; background-color: white !important; border: none; padding:none;">
+			<div style="position:relative; left:50px; color: #44df9e; width:360px; background-color: white; border: none; padding:15px; padding-top:0px;">
 				<h3>
 					<?php 
 						echo $_SESSION['success']; 

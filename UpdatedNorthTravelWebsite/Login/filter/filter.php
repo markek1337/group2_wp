@@ -198,21 +198,19 @@ include "header.php";
                                                             <th>Price category</th>
                                                             <th>Price</th>
                                                             <th>Seasonal</th>
-                                                            <th>Image</th>
+                                                            <th>Link</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="userData">		
-                                                        <?php			
-                                                            echo '
-                                                                <tr>
-                                                                <td>'.$destinationitems['name'].'</td>
-                                                                <td>'.$destinationitems['country'].'</td>
-                                                                <td>'.$destinationitems['price_cat'].'</td>
-                                                                <td>'.$destinationitems['price'].'</td>
-                                                                <td>'.$destinationitems['seasonal'].'</td>
-                                                                <td>'.$destinationitems['image'].'</td>
-                                                                </tr>';
-                                                                ?>
+                                                    <tr>
+                                                                <td><?php echo $destinationitems['name'];?></td>
+                                                                <td><?php echo $destinationitems['country'];?></td>
+                                                                <td><?php echo $destinationitems['price_cat'];?></td>
+                                                                <td><?php echo $destinationitems['price'];?></td>
+                                                                <td><?php echo $destinationitems['seasonal'];?></td>
+                                                                <td><a href="<?php echo $destinationitems['link'];?>" class="btn" role="button" aria-pressed="true" style="background-color:#4f7fa3; color:white;">Visit</a>
+                                                                </td>
+                                                                </tr>
                                                     </tbody>
                                                         </table>	
                                                     </div>
@@ -242,21 +240,19 @@ include "header.php";
                                                             <th>Price category</th>
                                                             <th>Price</th>
                                                             <th>Seasonal</th>
-                                                            <th>Learn more</th>
+                                                            <th>Link</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody id="userData">		
-                                                        <?php			
-                                                            echo '
-                                                                <tr>
-                                                                <td>'.$destinationitems['name'].'</td>
-                                                                <td>'.$destinationitems['country'].'</td>
-                                                                <td>'.$destinationitems['price_cat'].'</td>
-                                                                <td>'.$destinationitems['price'].'</td>
-                                                                <td>'.$destinationitems['seasonal'].'</td>
-                                                                <td>'.$destinationitems['image'].'</td>
-                                                                </tr>';
-                                                                ?>
+                                                    <tr>
+                                                                <td><?php echo $destinationitems['name'];?></td>
+                                                                <td><?php echo $destinationitems['country'];?></td>
+                                                                <td><?php echo $destinationitems['price_cat'];?></td>
+                                                                <td><?php echo $destinationitems['price'];?></td>
+                                                                <td><?php echo $destinationitems['seasonal'];?></td>
+                                                                <td><a href="<?php echo $destinationitems['link'];?>" class="btn" role="button" aria-pressed="true" style="background-color:#4f7fa3; color:white;">Visit</a>
+                                                                </td>
+                                                                </tr>
                                                     </tbody>
                                                         </table>	
                                                     </div>

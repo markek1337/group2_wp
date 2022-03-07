@@ -29,7 +29,7 @@
 		<h2>Create a new user</h2>
 	</div>
 	
-	<form method="post" action="create_user.php" style="border-top:none; position:relative; top:30px; left: 450px">
+	<form method="post" action="create_user.php" style="border-top:none; position:relative; top:-5px; left: 0px">
 		<p style="color:red;"><?php echo display_error(); ?></p>
 	
 		<div class="input-group">
@@ -57,7 +57,7 @@
 			<input type="password" name="password_2">
 		</div>
 		<div class="input-group">
-			<button type="submit" class="btn" name="register_btn" style="position:relative; border:none; font-size:20px; top: 30px; width: 200px; color:white; left:180px; background: #44df9e; padding:10px;"> Create a user</button>
+			<button type="submit" class="btn" name="register_btn" style="position:relative; border:none; font-size:20px; top: 15px; width: 200px; color:white; left:180px; background: #44df9e; padding:10px;"> Create a user</button>
 		</div>
 	</form>
 </body>
