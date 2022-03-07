@@ -48,7 +48,7 @@ if(isset($_GET['delete_all'])) {
 
 ?>
 
-<!-- Products in the shopping cart -->
+<!-- Products -->
 <div class="products">
     <div class="box-container" style="display: flex; flex-wrap: wrap; gap:15px; justify-content: center;">
         <?php
